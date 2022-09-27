@@ -1,15 +1,14 @@
-import './style.css'
-import bgx from '../../assets/bgxscript.jpeg'
+import './style.css';
 
-import CardCreditPix from '../CardCreditPix'
-import Checkbox from '../CheckedBox'
+import CardCreditPix from '../CardCreditPix';
+import Checkbox from '../CheckedBox';
 
-import { useCounter} from '../../hooks/UseCounter';
+import { useCounter } from '../../hooks/UseCounter';
 
-import iconPix from '../../assets/icon-pix.png'
-import iconCartao from '../../assets/icon-cartao.png'
-import iconDiscord from '../../assets/icon-discord.png'
-import iconWhatsapp from '../../assets/whatsapp-icon.png'
+import iconCartao from '../../assets/icon-cartao.png';
+import iconDiscord from '../../assets/icon-discord.png';
+import iconPix from '../../assets/icon-pix.png';
+import iconWhatsapp from '../../assets/whatsapp-icon.png';
 
 export default function CardCompra() {
     const { scriptState, descontoOn, handleDescontoOn, handleLinkOn, linkOn, priceOn, handlePriceOn, modalSelectPriceState, buttonLinkPix } = useCounter()

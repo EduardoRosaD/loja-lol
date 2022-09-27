@@ -7,12 +7,12 @@ export default function CardQrPix (type){
     return (
         <div>
         {descontoOn.ativo && <div>
-          <img src={type.src} alt="QR Code Pix" />
+          <img src={type.src} alt="QRCodePix" />
         <p>Qr code pix chave PIx doisuadqwuUEWEUWQHE434$#@$#$#@$</p>
         </div>
         }
         {!descontoOn.ativo  && <div>
-          <img></img>
+          <img alt='logoMercadoPago'></img>
           <p>Link mercado pago</p>
         </div>
         }
