@@ -30,7 +30,7 @@ export default function SideBar() {
             <div id='sidebar-icons-container'>
                 {icons.map((icon) => (
                     <div id='sidebar-icon-container'>
-                        <img src={icon.src} key={icon.src} className={!icon.ativo  ? 'margin-left-30' : 'pointer transform-icon'}
+                        <img src={icon.src} key={icon.src} alt='gameIcon' className={!icon.ativo  ? 'margin-left-30' : 'pointer transform-icon'}
                             onClick={() => icon.ativo ? goToBuyPage(homeState) : ''}
                         ></img>
                         {icon.ativo !== true && <p id= 'em-breve-title' className='roboto400 size60 '>EM BREVE</p>}

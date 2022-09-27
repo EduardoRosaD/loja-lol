@@ -10,14 +10,14 @@ export default function Example (){
                 <div><span className='roboto400 white size22 height25'>ATENDIMENTO AO CLIENTE</span></div>
                 
                 <div>
-                    <a target={'_blank'}
+                    <a target={'_blank'} rel="noreferrer"
                     id='container-discord-footer' href="https://discord.gg/hb4wXYkBYk">
                         <img src={iconDiscord} alt="icon-discord" id='icon-discord' />
                         <span className='white size22 pointer roboto400'> Discord </span>
                     </a>
                 </div>
                 <div>
-                    <a target={'_blank'}
+                    <a target={'_blank'} rel="noreferrer"
                     id='container-whatsapp-footer' href="https://wa.me/message/BBMI4JNK2Y5TC1">
                         <img src={iconWhatsapp} alt="icon-whatsapp" id='icon-whatsapp' />
                         <span className='white size22 pointer roboto400'>(61) 9 9918 4644</span>

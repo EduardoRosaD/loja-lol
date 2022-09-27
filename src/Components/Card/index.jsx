@@ -1,10 +1,10 @@
-import "./style.css"
+import "./style.css";
 
-import { useCounter} from '../../hooks/UseCounter';
+import { useCounter } from '../../hooks/UseCounter';
 
 
 export default function Card(){
-    const { handleScriptState, modalKeepBuyingState, games } = useCounter()
+    const { handleScriptState,  games } = useCounter()
     return (
     <div  id="card-main-container">
             <div id="container-titulo-cards">

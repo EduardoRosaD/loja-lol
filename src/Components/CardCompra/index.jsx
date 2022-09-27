@@ -12,7 +12,7 @@ import iconDiscord from '../../assets/icon-discord.png'
 import iconWhatsapp from '../../assets/whatsapp-icon.png'
 
 export default function CardCompra() {
-    const { scriptState, handleHomeState, homeState, descontoOn, handleDescontoOn, handleLinkOn, linkOn, priceOn, handlePriceOn, modalSelectPriceState, buttonLinkPix } = useCounter()
+    const { scriptState, descontoOn, handleDescontoOn, handleLinkOn, linkOn, priceOn, handlePriceOn, modalSelectPriceState, buttonLinkPix } = useCounter()
 
     return (
         <div id='card-compra-main-container' >
@@ -25,13 +25,13 @@ export default function CardCompra() {
                     <p className='roboto400 grey size22 height25 '><strong>Passo 2:</strong> Escolha a forma de pagamento.</p>
                     <p className='roboto400 grey size22 height25 '><strong>Passo 3:</strong> Ao selecionar a opção de <strong>quantidade de dias</strong> e a<strong> forma de pagamento</strong> você receberá um QR CODE para pagamentos via PIX. Para pagamentos com cartão de crédito você receberá um link que vai te redirecionar para a página de pagamentos do Mercado Pago, conclua o pagamento por lá.</p>
                     <p className='roboto400 grey size22 height25 '><strong>Passo 4:</strong> Envie o <strong>comprovante de pagamento</strong> para nossos canais  <div id='container-link-discord'>
-                        <a target={'_blank'}
+                        <a target={'_blank'} rel="noreferrer"
                         className='link-information'
                         href="https://discord.gg/hb4wXYkBYk">
                             <img src={iconDiscord} alt="icon-discord" id='icon-discord' />
                             <span className='white size19 pointer roboto400'>Discord</span></a>
                     </div> ou  <div id='container-link-wpp'>
-                    <a target={'_blank'}
+                    <a target={'_blank'} rel="noreferrer"
                     className='link-information'
                     href="https://wa.me/message/BBMI4JNK2Y5TC1">
                         <img src={iconWhatsapp} alt="icon-whatsapp" id='icon-whatsapp' />
@@ -45,7 +45,7 @@ export default function CardCompra() {
                    <div id='card-compra-container1'>
                    { !linkOn ?
                         <div>
-                            <img id='image-compra-card' src={scriptState.img}></img>
+                            <img id='image-compra-card' src={scriptState.img} alt='scriptImg'></img>
                             <p className='roboto400 gold1 size22 height25 center'>Esse script usa hwid spoof incluso para driblar banimentos. </p>
                           
                         </div>  : <CardCreditPix/>}
