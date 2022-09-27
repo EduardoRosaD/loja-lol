@@ -61,7 +61,7 @@ export default function CardCompra() {
                 <div id='card-compra-container2'>
                     <div >
                         <h3 className='shadowsIntoLight400 gold1 size60 height42'>1. Escolha uma opção</h3>
-                        {scriptState.prices.length < 2 ? <button className={ !priceOn.price1 ?"priceUnselected roboto400 gold1 size32 height42" : "priceSelected roboto400  size32 height42 " }
+                        {scriptState.prices.length < 2 ? <button className={ !priceOn.price1 ?"priceUnselected roboto400  size32 height42 white2" : "priceSelected roboto400  size32 height42 " }
                         onClick={() => handlePriceOn(1,descontoOn.ativo)}
                         >30 Dias: R$ {!descontoOn.ativo ? scriptState.prices[0] : parseFloat(scriptState.prices[0]) - 30 + ",00"} </button> : <div id='container-compra-buttons'><button
                         onClick={() => handlePriceOn(1,descontoOn.ativo)}  className={ !priceOn.price1 ?"priceUnselected roboto400 gold1 size32 height42" : "priceSelected roboto400 gold1 size32 height42 " } >1 Dia: R$ {!descontoOn.ativo ? scriptState.prices[1] : parseFloat(scriptState.prices[1]) - 5 + ",00"} </button><button  className={ !priceOn.price2 ?"priceUnselected roboto400 gold1 size32 height42" : "priceSelected roboto400 gold1 size32 height42 " }
@@ -76,11 +76,13 @@ export default function CardCompra() {
                             <div id='image-payment-container'>
                                 <button
                                 onClick={() => handleDescontoOn()}
+                                className={descontoOn.ativo ? 'paymentTypeSelected' : 'paymentTypeUnselected'}
                                 >
                                     <img id="container-two-image-pix" src={iconPix} alt="icon-pix" />
                                 </button>
                                 <button
                                   onClick={() => handleDescontoOn('cartao')}
+                                  className={!descontoOn.ativo ? 'paymentTypeSelected' : 'paymentTypeUnselected'}
                                 >
                                     <img id='container-two-image-cartao' src={iconCartao} alt="icon-cartao" />
                                 </button>

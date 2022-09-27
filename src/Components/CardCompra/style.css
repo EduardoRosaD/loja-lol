@@ -13,12 +13,7 @@
 }
 
 #card-compra-main-container button {
-    border: 2px double black;
-    box-shadow: 1px 1px 5px 1px #172838;
-    color: rgba(245, 245, 245, 0.726);
-
     padding: 5px;
-
     border-radius: 10px;
 
     cursor: pointer;
@@ -138,7 +133,10 @@
     gap: 100px;
     align-items: center;
     justify-content: center;
-
+}
+#container-compra-buttons button{
+    box-shadow: 1px 1px 5px 1px #172838;
+    color: rgba(245, 245, 245, 0.726);
 }
 
 #card-compra-container2 h3 {
@@ -193,18 +191,21 @@
     max-width: 225px;
     height: 160px;
 }
+.paymentTypeSelected{
+    border: 1px solid green;
+    box-shadow: 0px 1px 9px 0px rgba(0, 128, 0, 0.651);
+    background-color: white;
+}
+.paymentTypeUnselected{
+    background-color: #172838;
+}
 
 #image-payment-container button:hover {
     transform: scale(1.05);
 }
 
 #image-payment-container button {
-    border: 2px solid #172838;
-    box-shadow: 1px 1px 5px 1px #172838;
-
-
     border-radius: 10px;
-    background-color: transparent;
     cursor: pointer;
 }
 
@@ -213,7 +214,6 @@
     height: 350px;
 
     border-radius: 30px;
-    box-shadow: 1px 1px 5px 1px #172838;
 }
 
 #text-payment-forms-container {

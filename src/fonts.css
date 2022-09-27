@@ -11,6 +11,9 @@
 .white {
     color: #FFFFFF;
 }
+.white2{
+   color: rgba(245, 245, 245, 0.726);
+}
 .red {
     color: #ff0000af;
 }

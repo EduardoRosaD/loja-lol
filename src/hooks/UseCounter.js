@@ -21,7 +21,7 @@ export function useCounterProvider(){
       price1: false,
       price2: false,
     });
-    const [ buttonLinkPix, setButtonLinkPix ] = useState('Gerar Link Mercado Pago'); 
+    const [ buttonLinkPix, setButtonLinkPix ] = useState('Gerar Link'); 
 
     const handleHomeState = () => {
         setHomeState(!homeState);
@@ -33,13 +33,17 @@ export function useCounterProvider(){
         setHomeState(!homeState);
       }
       const handleDescontoOn = (paymentType) => {
+        setButtonLinkPix('Gerar Link')
+        setPriceOn({
+          price1: false,
+          price2: false,
+        })
         if( paymentType === 'cartao' ){
             setDescontoOn({
             ativo: false,
             text:  "Desconto Off"
           })
           setLinkOn(false)
-          setButtonLinkPix('Gerar Link Mercado Pago')
           return
         }
         else{
