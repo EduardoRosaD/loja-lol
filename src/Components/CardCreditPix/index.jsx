@@ -6,7 +6,8 @@ export default function CardQrPix (type){
   console.log(descontoOn)
     return (
         <div>
-        {descontoOn.ativo && <div>
+        {descontoOn.ativo &&
+         <div className='logo-link-pix-container'>
           <img src={type.src} alt="QRCodePix" />
         <p>Qr code pix chave PIx doisuadqwuUEWEUWQHE434$#@$#$#@$</p>
         </div>
