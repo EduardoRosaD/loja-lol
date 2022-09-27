@@ -1,0 +1,100 @@
+.grey {
+    color: #172838;
+}
+.gold1 {
+    color: #71613D;
+}
+
+.gold2 {
+    color: #AD935C
+}
+.white {
+    color: #FFFFFF;
+}
+.red {
+    color: #ff0000af;
+}
+
+.shadow {
+    text-shadow: 5px 5px 5px #000000;
+}
+
+.letterSpace2 {
+    letter-spacing: 2px;
+}
+
+.height14 {
+    line-height: 14px;
+}
+
+.size12 {
+    font-size: 12px;
+}
+
+.publicSans400 {
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+}
+.size19{
+    font-size: 19px;
+}
+.size22 {
+    font-size: 22px;
+}
+.size32 {
+    font-size: 32px;
+}
+
+.size40 {
+    font-size: 40px;
+}
+
+.size60 {
+    font-size: 60px;
+}
+
+.size80 {
+    font-size: 80px;
+}
+
+.ibarraReal700 {
+    font-family: 'Ibarra Real Nova';
+    font-weight: 700;
+}
+
+.height25 {
+    line-height: 25px;
+}
+
+.height42 {
+    line-height: 42px;
+}
+
+.ibarraReal400 {
+    font-family: 'Ibarra Real Nova';
+    font-weight: 400;
+}
+
+.shadowsIntoLight400 {
+    font-family: 'Shadows Into Light';
+    font-weight: 400;
+}
+
+.roboto400 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.roboto700 {
+    font-family: 'Roboto';
+    font-weight: 700;
+}
+
+.bungeeSpice400 {
+    font-family: 'Bungee Spice';
+    font-weight: 400;
+}
+
+.center{
+    text-align: center;
+}

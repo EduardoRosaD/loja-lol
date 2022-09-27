@@ -1,0 +1,14 @@
+#main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+
+    background-image: linear-gradient(to right, #F4B991 , #F59182);
+}
+
+#home-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
