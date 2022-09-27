@@ -153,8 +153,10 @@
 }
 
 .desconto-controladorOff {
-    background-color: white;
-    color: black;
+    border: 2px double black;
+    box-shadow: 1px 1px 5px 1px #172838;
+    color: rgba(245, 245, 245, 0.726);
+    background-color: #172838;
 }
 
 .desconto-controladorOn {

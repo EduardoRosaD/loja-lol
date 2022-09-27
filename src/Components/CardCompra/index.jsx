@@ -67,7 +67,7 @@ export default function CardCompra() {
                         onClick={() => handlePriceOn(1,descontoOn.ativo)}  className={ !priceOn.price1 ?"priceUnselected roboto400 gold1 size32 height42" : "priceSelected roboto400 gold1 size32 height42 " } >1 Dia: R$ {!descontoOn.ativo ? scriptState.prices[1] : parseFloat(scriptState.prices[1]) - 5 + ",00"} </button><button  className={ !priceOn.price2 ?"priceUnselected roboto400 gold1 size32 height42" : "priceSelected roboto400 gold1 size32 height42 " }
                         onClick={() => handlePriceOn(2,descontoOn.ativo)}
                         >30 Dias: R$ {!descontoOn.ativo ? scriptState.prices[0] : parseFloat(scriptState.prices[0]) - 30 + ",00"}</button></div>}
-                        <div className={descontoOn.ativo ? "desconto-controladorOn desconto" : "desconto-controladorOff desconto"}><div><span><strong>{descontoOn.text}</strong></span><Checkbox></Checkbox></div>
+                        <div className={descontoOn.ativo ? "desconto-controladorOn roboto400 desconto" : "desconto-controladorOff roboto400 desconto"}><div><span>{descontoOn.text}</span><Checkbox></Checkbox></div>
                         </div>
                     </div>
                     <div>
