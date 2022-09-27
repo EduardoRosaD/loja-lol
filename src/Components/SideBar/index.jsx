@@ -26,7 +26,7 @@ export default function SideBar() {
 
     return (
         <div id='side-bar-main-container'>
-            <h1 className='shadowsIntoLight400 size80 gold2' id='sidebar-title'>JOGOS</h1>
+            <h1 className='shadowsIntoLight400 size80 gold2 goldenSoftShadow' id='sidebar-title'>JOGOS</h1>
             <div id='sidebar-icons-container'>
                 {icons.map((icon) => (
                     <div id='sidebar-icon-container'>
