@@ -1,7 +1,7 @@
 import { useCounter } from '../../hooks/UseCounter';
 import './style.css';
 
-import iconCartao from '../../assets/icon-cartao.png';
+import iconPagSeguro from '../../assets/icon-pagseguro.png';
 
 export default function CardQrPix() {
   const { descontoOn, scriptState, priceOn } = useCounter();
@@ -32,7 +32,8 @@ export default function CardQrPix() {
       }
       {!descontoOn.ativo && <div>
         <h1 id='title-payment-card' className='shadowsIntoLight400 gold1 size55 height60 goldenSoftShadow'>PAGAMENTO CARTÃO DE CRÉDITO</h1>
-        <div className='payment-container'><img alt='logoMercadoPago' src={iconCartao} className='priceSelected'></img>
+        <div className='payment-container'>
+          <img alt='logoMercadoPago' src={iconPagSeguro} className='priceSelected'></img>
           <div id='text-payment-card'>
             
             <p className='roboto400 grey size16 height25'>Acesse o link abaixo para concluir o pagamento via cartão de crédito </p>

@@ -6,7 +6,7 @@ import bgxscript from "../assets/bgxscript.jpeg";
 import toirplus from "../assets/toirplus.jpeg";
 import xnscript from "../assets/xnscript.jpeg";
 
-import qrCode10 from "../assets/qrcode-pix-10.png";
+
 import qrCode15 from "../assets/qrcode-pix-15.png";
 import qrCode65 from "../assets/qrcode-pix-65.png";
 import qrCode80 from "../assets/qrcode-pix-80.png";
@@ -88,7 +88,7 @@ export function useCounterProvider(){
           setLinkOn(false)
         }
 
-   const img = ''     
+       
  const games ={
   game1: {
      title: 'League of Legends',

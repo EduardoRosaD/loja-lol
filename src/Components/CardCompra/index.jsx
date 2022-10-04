@@ -11,7 +11,7 @@ import iconPix from '../../assets/icon-pix.png';
 import iconWhatsapp from '../../assets/whatsapp-icon.png';
 
 export default function CardCompra() {
-    const { scriptState, descontoOn, handleDescontoOn, handleLinkOn, linkOn, priceOn, handlePriceOn, modalSelectPriceState, buttonLinkPix, pagamentoQrCode } = useCounter()
+    const { scriptState, descontoOn, handleDescontoOn, handleLinkOn, linkOn, priceOn, handlePriceOn, modalSelectPriceState, buttonLinkPix } = useCounter()
 
     return (
         <div id='card-compra-main-container' >
