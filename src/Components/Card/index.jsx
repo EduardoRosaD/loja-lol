@@ -26,7 +26,7 @@ export default function Card(){
             </div>
         
             <button className="pointer publicSans400 letterSpace2 height14 size12 center btn-card"
-            onClick={() => handleScriptState(product)}
+            onClick={() => handleScriptState(product,product.qrCode1[0])}
             >COMPRAR</button>
             </div>
         ))}

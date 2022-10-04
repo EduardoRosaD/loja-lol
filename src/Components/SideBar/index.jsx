@@ -9,7 +9,7 @@ import gtaVIcon from '../../assets/gta5-icon-sidebar.png'
 
 
 export default function SideBar() {
-    const { handleHomeState, homeState, setModalKeepBuyingState, modalKeepBuyingState } = useContext(UserContext)
+    const { handleHomeState, homeState, setModalKeepBuyingState, modalKeepBuyingState, turnLinkOff} = useContext(UserContext)
 
     const goToBuyPage = (home) => {
         if (home) {
@@ -20,6 +20,8 @@ export default function SideBar() {
         }
         else
             handleHomeState(true)
+           turnLinkOff()
+            
     }
 
     const icons = [{ src: lolIcon, ativo: true, name: 'bgx' }, { src: valorantIcon, ativo: false, name: 'toirPlis' }, { src: gtaVIcon, ativo: false, name: 'xnScript' }]

@@ -30,13 +30,15 @@
     line-height: 14px;
 }
 
-.size12 {
-    font-size: 12px;
-}
-
 .publicSans400 {
     font-family: 'Public Sans', sans-serif;
     font-weight: 400;
+}
+.size12 {
+    font-size: 12px;
+}
+.size16{
+    font-size: 16px;
 }
 .size19{
     font-size: 19px;
@@ -50,6 +52,14 @@
 
 .size40 {
     font-size: 40px;
+}
+
+.size50 {
+    font-size: 50px;
+}
+
+.size55 {
+    font-size: 55px;
 }
 
 .size60 {
@@ -73,6 +83,10 @@
     line-height: 42px;
 }
 
+.height60 {
+    line-height: 60px;
+}
+
 .ibarraReal400 {
     font-family: 'Ibarra Real Nova';
     font-weight: 400;
@@ -91,6 +105,11 @@
 .roboto700 {
     font-family: 'Roboto';
     font-weight: 700;
+}
+
+.roboto900 {
+    font-family: 'Roboto';
+    font-weight: 900;
 }
 
 .bungeeSpice400 {

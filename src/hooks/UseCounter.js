@@ -6,6 +6,12 @@ import bgxscript from "../assets/bgxscript.jpeg";
 import toirplus from "../assets/toirplus.jpeg";
 import xnscript from "../assets/xnscript.jpeg";
 
+import qrCode10 from "../assets/qrcode-pix-10.png";
+import qrCode15 from "../assets/qrcode-pix-15.png";
+import qrCode65 from "../assets/qrcode-pix-65.png";
+import qrCode80 from "../assets/qrcode-pix-80.png";
+import qrCode105 from "../assets/qrcode-pix-105.png";
+
 export function useCounterProvider(){
     const [homeState, setHomeState] = useState(true); 
     const [scriptState, setScriptState] = useState('');
@@ -15,7 +21,6 @@ export function useCounterProvider(){
       ativo: false,
       text: "Desconto Off"
     });
-    const [ pagamentoLinks, setPagamentoLinks ] = useState({});
     const [ linkOn, setLinkOn ] = useState(false);
     const [ priceOn, setPriceOn ] = useState({
       price1: false,
@@ -29,7 +34,7 @@ export function useCounterProvider(){
         setPriceOn({})
         }
       const handleScriptState = (script) => {
-        setScriptState(script);
+        setScriptState(script)
         setHomeState(!homeState);
       }
       const handleDescontoOn = (paymentType) => {
@@ -56,9 +61,6 @@ export function useCounterProvider(){
           return
         }
       }
-        const handlePagamentoLinks = (links) => {  
-            setPagamentoLinks(links);
-        }
         const handleLinkOn = (priceOn) => {
           if ( !priceOn.price1 && !priceOn.price2 ) {
             setModalSelectPriceState(true);
@@ -71,29 +73,32 @@ export function useCounterProvider(){
         const handlePriceOn = (option, descontoOn) => {
           
           if (  option === 1){
-            setPriceOn({price1: true, price2: false});
-            
-          }
-    
+            setPriceOn({price1: true, price2: false});    
+          }   
           if (  option === 2){
             setPriceOn({price1: false, price2: true});
           }
           if ( descontoOn){
             setButtonLinkPix('Gerar QR Code Pix')
           }else{
-            setButtonLinkPix('Gerar Link Mercado Pago')
+            setButtonLinkPix('Gerar Link ')
           }
         }
-        
+        const turnLinkOff = () => {
+          setLinkOn(false)
+        }
+
+   const img = ''     
  const games ={
   game1: {
      title: 'League of Legends',
-     products: [{ img: bgxscript, name: 'bgx', prices:['105,00'],links:['https://mpago.la/1brp3rL','https://mpago.la/2WUzcqW']}, { img: toirplus, name: 'toirPlus', prices: ['65,00', '15,00'], links:['https://mpago.la/1MLKLTF','https://mpago.la/2WUzcqW']  }, { img: xnscript, name: 'xnScript', prices: ['80,00', '15,00'], links: ['https://mpago.la/1LaEAuS', ]  }, { img: bgxscript, name: 'bgx',  prices: ['80,00', '15,00'],links:['https://mpago.la/1MLKLTF','https://mpago.la/2WUzcqW']  }, { img: toirplus, name: 'bgx',  prices: ['80,00', '15,00'], links:['https://mpago.la/1MLKLTF','https://mpago.la/2WUzcqW'] }],
+     products: [{ img: bgxscript, name: 'bgx', prices:['115,00'],links:['https://pag.ae/7YHZf6NS8','https://pag.ae/7YHZf6NS8'],qrCode1:[qrCode105, '00020126360014BR.GOV.BCB.PIX0114+55619828476225204000053039865406105.005802BR5920Pedro Rosa Domingues6008Brasilia62070503***63049626'],qrCode2:[qrCode105, '00020126360014BR.GOV.BCB.PIX0114+55619828476225204000053039865406105.005802BR5920Pedro Rosa Domingues6008Brasilia62070503***63049626']}, { img: toirplus, name: 'toirPlus', prices: ['72,00', '20,00'], links:['https://pag.ae/7YHZeNEb7','https://pag.ae/7YHZemvCL'],qrCode1:[qrCode65, '00020126360014BR.GOV.BCB.PIX0114+5561982847622520400005303986540565.005802BR5920Pedro Rosa Domingues6008Brasilia62070503***63044BA0'],qrCode2:[qrCode15, '00020126360014BR.GOV.BCB.PIX0114+5561982847622520400005303986540515.005802BR5920Pedro Rosa Domingues6008Brasilia62070503***63043895']  }, { img: xnscript, name: 'xnScript', prices: ['88,00', '18,00'], links: ['https://pag.ae/7YHZdY868','https://pag.ae/7YHZdA--q' ],qrCode1:[qrCode80, '00020126360014BR.GOV.BCB.PIX0114+5561982847622520400005303986540580.005802BR5920Pedro Rosa Domingues6008Brasilia62070503***6304829B'],qrCode2:[qrCode15, '00020126360014BR.GOV.BCB.PIX0114+5561982847622520400005303986540515.005802BR5920Pedro Rosa Domingues6008Brasilia62070503***63043895']   }, { img: bgxscript, name: 'bgx', prices:['115,00'],links:['https://pag.ae/7YHZf6NS8','https://pag.ae/7YHZf6NS8'],qrCode1:[qrCode105, '00020126360014BR.GOV.BCB.PIX0114+55619828476225204000053039865406105.005802BR5920Pedro Rosa Domingues6008Brasilia62070503***63049626'],qrCode2:[qrCode105, '00020126360014BR.GOV.BCB.PIX0114+55619828476225204000053039865406105.005802BR5920Pedro Rosa Domingues6008Brasilia62070503***63049626']}],
    }
 }
 
 
       return {
+        setScriptState,
         homeState,
         scriptState,
         handleHomeState,
@@ -102,15 +107,14 @@ export function useCounterProvider(){
         setModalKeepBuyingState,
         descontoOn,
         handleDescontoOn,
-        pagamentoLinks,
-        handlePagamentoLinks,
         linkOn,
         handleLinkOn,
         priceOn,
         handlePriceOn,
         modalSelectPriceState,
         buttonLinkPix,
-        games
+        games,
+        turnLinkOff
       }
 } 
 

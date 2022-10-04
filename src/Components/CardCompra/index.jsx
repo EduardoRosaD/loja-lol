@@ -11,7 +11,7 @@ import iconPix from '../../assets/icon-pix.png';
 import iconWhatsapp from '../../assets/whatsapp-icon.png';
 
 export default function CardCompra() {
-    const { scriptState, descontoOn, handleDescontoOn, handleLinkOn, linkOn, priceOn, handlePriceOn, modalSelectPriceState, buttonLinkPix } = useCounter()
+    const { scriptState, descontoOn, handleDescontoOn, handleLinkOn, linkOn, priceOn, handlePriceOn, modalSelectPriceState, buttonLinkPix, pagamentoQrCode } = useCounter()
 
     return (
         <div id='card-compra-main-container' >
@@ -63,10 +63,10 @@ export default function CardCompra() {
                         <h3 className='shadowsIntoLight400 gold1 size60 height42 goldenSoftShadow'>1. Escolha uma opção</h3>
                         {scriptState.prices.length < 2 ? <button className={ !priceOn.price1 ?"priceUnselected roboto400  size32 height42 white2" : "priceSelected roboto400  size32 height42 " }
                         onClick={() => handlePriceOn(1,descontoOn.ativo)}
-                        >30 Dias: R$ {!descontoOn.ativo ? scriptState.prices[0] : parseFloat(scriptState.prices[0]) - 30 + ",00"} </button> : <div id='container-compra-buttons'><button
-                        onClick={() => handlePriceOn(1,descontoOn.ativo)}  className={ !priceOn.price1 ?"priceUnselected roboto400 gold1 size32 height42" : "priceSelected roboto400 gold1 size32 height42 " } >1 Dia: R$ {!descontoOn.ativo ? scriptState.prices[1] : parseFloat(scriptState.prices[1]) - 5 + ",00"} </button><button  className={ !priceOn.price2 ?"priceUnselected roboto400 gold1 size32 height42" : "priceSelected roboto400 gold1 size32 height42 " }
+                        >30 Dias: R$ {!descontoOn.ativo ? scriptState.prices[0] : parseFloat(scriptState.prices[0]) - 5 + ",00"} </button> : <div id='container-compra-buttons'><button
+                        onClick={() => handlePriceOn(1,descontoOn.ativo)}  className={ !priceOn.price1 ?"priceUnselected roboto400 gold1 size32 height42" : "priceSelected roboto400 gold1 size32 height42 " } >1 Dia: R$ {!descontoOn.ativo ? scriptState.prices[1] : parseFloat(scriptState.prices[1]) - 3 + ",00"} </button><button  className={ !priceOn.price2 ?"priceUnselected roboto400 gold1 size32 height42" : "priceSelected roboto400 gold1 size32 height42 " }
                         onClick={() => handlePriceOn(2,descontoOn.ativo)}
-                        >30 Dias: R$ {!descontoOn.ativo ? scriptState.prices[0] : parseFloat(scriptState.prices[0]) - 30 + ",00"}</button></div>}
+                        >30 Dias: R$ {!descontoOn.ativo ? scriptState.prices[0] : parseFloat(scriptState.prices[0]) - 5 + ",00"}</button></div>}
                         <div className={descontoOn.ativo ? "desconto-controladorOn roboto400 desconto" : "desconto-controladorOff roboto400 desconto"}><div><span>{descontoOn.text}</span><Checkbox></Checkbox></div>
                         </div>
                     </div>
@@ -89,10 +89,10 @@ export default function CardCompra() {
                             </div>
                             <div id='text-payment-forms-container'>
                                 <div>
-                                    <p className='roboto400 gold1 size22 height25'><strong>Opção 1:</strong> Ao selecionar esta forma de pagamento é gerado um QRCODE e uma chave PIX, aponte a camera do seu celular com o aplicativo bankline para realizar o pagamento. Depois é só enviar o comprovante! Você receberá seu script, pelo mesmo canal, em até 10 minutos depois que o comprovante for enviado.</p>
+                                    <p className='roboto400 gold1 size22 height25'><strong>PIX:</strong> Ao selecionar esta forma de pagamento é gerado um QRCODE e uma chave PIX, aponte a camera do seu celular com o aplicativo bankline para realizar o pagamento. Depois é só enviar o comprovante! Você receberá seu script, pelo mesmo canal, em até 10 minutos depois que o comprovante for enviado.</p>
                                 </div>
                                 <div>
-                                    <p className='roboto400 gold1 size22 height25'><strong>Opção 2:</strong> Ao selecionar esta forma de pagamento é gerado um link, você deverá clicar no link e ser redirecionado para a página de pagamentos do Mercado Pago. Conclua o pagamento por lá.</p>
+                                    <p className='roboto400 gold1 size22 height25'><strong>CARTÃO DE CRÉDITO:</strong> Ao selecionar esta forma de pagamento é gerado um link, você deverá clicar no link e ser redirecionado para a página de pagamentos do Mercado Pago. Conclua o pagamento por lá.</p>
                                 </div>
                             </div>
                         </div>

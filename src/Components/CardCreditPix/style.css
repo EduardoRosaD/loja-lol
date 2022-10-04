@@ -1,3 +1,73 @@
 .logo-link-pix-container{
-    max-width: 20vw;
+    max-width: 30vw;
+}
+
+.payment-container{
+    display: flex;
+}
+#qrCode-img{
+    box-shadow: 0px 1px 9px 0px rgb(0 128 0 / 65%)!important;
+}
+
+#title-payment-pix {
+    text-align: center;
+    height: 70px;
+}
+
+#title-payment-card {
+    text-align: center;
+    height: 150px;
+}
+#text-payment-card {
+    width: 399px;
+    text-align: center;
+}
+
+#text-payment-card a{
+    display: block;
+}
+
+#infos-container {
+    width: 600px;
+    margin-left: 49px;
+}
+
+#pix-key {
+    font-size: 12px;
+}
+
+
+#link-payment-card {
+    display: flex;
+    justify-content: center;
+    gap: 5px;  
+    margin-top: 5px;
+}
+#link-payment-card a{
+    text-decoration: none;
+}
+#link-payment-card a:hover{
+    color: white;
+    text-shadow: 0px 1px 9px  rgba(0, 128, 0, 0.651);
+    transform: scale(1.1);
+    margin-left:  5px ;
+}
+
+#copy-paste-text{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 5px;
+    margin-top: 20px;
+    
+}
+
+.down-pointer:after {
+    content: '\1F447';
+  
+}
+
+.right-pointer:after {
+    content: '\1F449';
+  
 }
